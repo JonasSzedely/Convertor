@@ -18,4 +18,12 @@ val DarkGreen = Color(0xFF244533)
 val VeryDarkGreen = Color(0xFF0D1A13)
 val LightGreyGreen = Color(0xFFDEFFEC)
 val VeryLightGreen = Color(0xFFF5FCF8)
-val BightCyanGreen = Color(0xFFABFFCF)
+val BightCyanGreen = Color(0xFFC9FFE0)
+
+val LightBlue = Color(0xFF50CADF)
+
+val VeryLightBlue = Color(0xFF85DAE9)
+
+val Black = Color(0xFF000000)
+
+val DarkBlue = Color(0xFF0D2024)

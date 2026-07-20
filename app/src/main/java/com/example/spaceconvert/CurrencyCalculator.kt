@@ -9,7 +9,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun MeasurementCalculator() {
+fun CurrencyCalculator() {
 
     Column(
         Modifier.padding(30.dp,20.dp,20.dp,0.dp)

@@ -9,20 +9,19 @@ import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
-import com.example.spaceconvert.ui.theme.Typography
 
 private val DarkColorScheme = darkColorScheme(
-    primary = BaseGreen,
-    secondary = LightGreen,
-    tertiary = LightGreen,
-    onPrimary = VeryLightGreen,
-    background = VeryDarkGreen
+    primary = VeryLightBlue,
+    secondary = Black,
+    onPrimary = DarkBlue,
+    background = DarkBlue
 )
 
 private val LightColorScheme = lightColorScheme(
-    primary = DarkGreen,
-    onPrimary = BightCyanGreen,
-    background = BightCyanGreen
+    primary = DarkBlue,
+    secondary = VeryLightBlue,
+    onPrimary = LightBlue,
+    background = LightBlue
 
     /* Other default colors to override
     background = Color(0xFFFFFBFE),

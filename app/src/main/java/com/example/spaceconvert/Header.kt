@@ -17,7 +17,6 @@ import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -28,17 +27,24 @@ fun Header(
     onNavigateHome: () -> Unit,
     title: String
 ) {
-
-
     TopAppBar(
-        title = {Text(title, fontSize = 20.sp)},
+        title = {
+            Text(
+                text = title,
+                color = MaterialTheme.colorScheme.primary,
+                style = MaterialTheme.typography.headlineLarge
+            )
+        },
         navigationIcon = {
             IconButton(
                 onClick = onNavigateHome,
-                Modifier.padding(start = 8.dp)) {
+                Modifier.padding(start = 8.dp)
+            ) {
                 Icon(
                     Icons.Filled.Home,
-                    contentDescription = "Home")
+                    contentDescription = "Home",
+                    tint = MaterialTheme.colorScheme.primary
+                )
             }
         },
         actions = {
@@ -48,21 +54,14 @@ fun Header(
                 onCheckedChange = onToggle,
                 thumbContent = {
                     if (darkTheme) {
-                        // Icon isn't focusable, no need for content description
                         Icon(
                             imageVector = Icons.Filled.Check,
                             contentDescription = null,
-                            modifier = Modifier.size(SwitchDefaults.IconSize),
+                            modifier = Modifier.size(SwitchDefaults.IconSize)
                         )
                     }
-                },
-
-                )
-            /*
-            IconButton(onClick = { /* z.B. Menü */ }) {
-                Icon(Icons.Default.MoreVert, contentDescription = "Mehr")
-            }
-             */
+                }
+            )
         },
         colors = TopAppBarDefaults.topAppBarColors(
             containerColor = MaterialTheme.colorScheme.background,
