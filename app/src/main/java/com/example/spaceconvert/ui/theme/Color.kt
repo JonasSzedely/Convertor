@@ -1,4 +1,4 @@
-package com.example.learnjetpackcompose.ui.theme
+package com.example.spaceconvert.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

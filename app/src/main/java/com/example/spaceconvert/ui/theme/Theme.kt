@@ -1,9 +1,8 @@
-package com.example.learnjetpackcompose.ui.theme
+package com.example.spaceconvert.ui.theme
 
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Typography
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.dynamicDarkColorScheme
 import androidx.compose.material3.dynamicLightColorScheme
@@ -21,11 +20,9 @@ private val DarkColorScheme = darkColorScheme(
 )
 
 private val LightColorScheme = lightColorScheme(
-    primary = LightGreen,
-    secondary = DarkGreen,
-    tertiary = DarkGreen,
-    onPrimary = VeryDarkGreen,
-    background = VeryLightGreen
+    primary = DarkGreen,
+    onPrimary = BightCyanGreen,
+    background = BightCyanGreen
 
     /* Other default colors to override
     background = Color(0xFFFFFBFE),
@@ -39,7 +36,7 @@ private val LightColorScheme = lightColorScheme(
 )
 
 @Composable
-fun LearnJetpackComposeTheme(
+fun SpaceConvertTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     // Dynamic color is available on Android 12+
     dynamicColor: Boolean = false,

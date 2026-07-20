@@ -1,10 +1,10 @@
-package com.example.learnjetpackcompose
+package com.example.spaceconvert
 
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Check
+import androidx.compose.material.icons.filled.Home
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -22,18 +22,28 @@ import androidx.compose.ui.unit.sp
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun Header(darkTheme: Boolean, onToggle: (Boolean) -> Unit) {
+fun Header(
+    darkTheme: Boolean,
+    onToggle: (Boolean) -> Unit,
+    onNavigateHome: () -> Unit,
+    title: String
+) {
+
 
     TopAppBar(
-        title = { Text("Header", fontSize = 20.sp) },
+        title = {Text(title, fontSize = 20.sp)},
         navigationIcon = {
-            IconButton(onClick = { /* z.B. zurück */ }) {
-                Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Zurück")
+            IconButton(
+                onClick = onNavigateHome,
+                Modifier.padding(start = 8.dp)) {
+                Icon(
+                    Icons.Filled.Home,
+                    contentDescription = "Home")
             }
         },
         actions = {
             Switch(
-                modifier = Modifier.padding(0.dp, 0.dp, 20.dp, 0.dp),
+                modifier = Modifier.padding(end = 20.dp),
                 checked = darkTheme,
                 onCheckedChange = onToggle,
                 thumbContent = {
@@ -55,8 +65,8 @@ fun Header(darkTheme: Boolean, onToggle: (Boolean) -> Unit) {
              */
         },
         colors = TopAppBarDefaults.topAppBarColors(
-            containerColor = MaterialTheme.colorScheme.primary,
-            titleContentColor = MaterialTheme.colorScheme.onPrimary
+            containerColor = MaterialTheme.colorScheme.background,
+            titleContentColor = MaterialTheme.colorScheme.primary
         )
     )
 }
