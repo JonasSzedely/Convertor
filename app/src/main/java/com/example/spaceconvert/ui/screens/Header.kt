@@ -1,4 +1,4 @@
-package com.example.spaceconvert
+package com.example.spaceconvert.ui.screens
 
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size

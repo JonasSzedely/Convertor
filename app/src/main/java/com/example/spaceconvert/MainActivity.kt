@@ -16,6 +16,10 @@ import androidx.navigation3.runtime.entryProvider
 import androidx.navigation3.runtime.rememberNavBackStack
 import androidx.navigation3.ui.NavDisplay
 import com.example.spaceconvert.ui.theme.SpaceConvertTheme
+import com.example.spaceconvert.ui.screens.CurrencyCalculator
+import com.example.spaceconvert.ui.screens.Header
+import com.example.spaceconvert.ui.screens.home.HomeScreen
+import com.example.spaceconvert.ui.screens.measurement.MeasurementCalculator
 import kotlinx.serialization.Serializable
 
 @Serializable
