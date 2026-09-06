@@ -5,9 +5,8 @@ import androidx.compose.runtime.Composable
 
 
 @Composable
-fun MeasurementCalculator(viewModel: MeasurementC(
-    factory =
-)) {
+fun MeasurementCalculator() {
+
 
 
 }
