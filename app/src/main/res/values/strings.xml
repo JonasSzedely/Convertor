@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">SpaceConvert</string>
+
+    <!-- Home -->
+    <string name="home_greeting">Hello Traveler!</string>
+    <string name="home_intro">I am Convertron,\nhow may I help you?</string>
+
+    <!-- Title -->
+    <string name="title_home">Home</string>
+    <string name="title_measurement">Measurements</string>
+    <string name="title_currency">Currencies</string>
+    <string name="title_cooking">Cooking</string>
+
+    <!-- Content Descriptions (Accessibility) -->
+    <string name="cd_home">open home screen</string>
+    <string name="cd_measurement">Open measurement converter</string>
+    <string name="cd_currency">Open currency converter</string>
+    <string name="cd_cooking">Open cooking converter</string>
+    <string name="cd_dark_mode">Dark mode</string>
 </resources>

@@ -1,4 +1,4 @@
-package com.example.spaceconvert.ui.screens
+package com.example.spaceconvert.ui.components
 
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -16,42 +16,49 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
-
+import com.example.spaceconvert.R
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun Header(
+    title: String,
     darkTheme: Boolean,
     onToggle: (Boolean) -> Unit,
     onNavigateHome: () -> Unit,
-    title: String
+    modifier: Modifier = Modifier
 ) {
+    val darkModeDescription = stringResource(R.string.cd_dark_mode)
+
     TopAppBar(
+        modifier = modifier,
         title = {
             Text(
                 text = title,
-                color = MaterialTheme.colorScheme.primary,
                 style = MaterialTheme.typography.headlineLarge
             )
         },
         navigationIcon = {
             IconButton(
                 onClick = onNavigateHome,
-                Modifier.padding(start = 8.dp)
+                modifier = Modifier.padding(start = 8.dp)
             ) {
                 Icon(
-                    Icons.Filled.Home,
-                    contentDescription = "Home",
-                    tint = MaterialTheme.colorScheme.primary
+                    imageVector = Icons.Filled.Home,
+                    contentDescription = stringResource(R.string.cd_home)
                 )
             }
         },
         actions = {
             Switch(
-                modifier = Modifier.padding(end = 20.dp),
                 checked = darkTheme,
                 onCheckedChange = onToggle,
+                modifier = Modifier
+                    .padding(end = 20.dp)
+                    .semantics { contentDescription = darkModeDescription },
                 thumbContent = {
                     if (darkTheme) {
                         Icon(
@@ -65,7 +72,9 @@ fun Header(
         },
         colors = TopAppBarDefaults.topAppBarColors(
             containerColor = MaterialTheme.colorScheme.background,
-            titleContentColor = MaterialTheme.colorScheme.primary
+            titleContentColor = MaterialTheme.colorScheme.primary,
+            navigationIconContentColor = MaterialTheme.colorScheme.primary,
+            actionIconContentColor = MaterialTheme.colorScheme.primary
         )
     )
 }
