@@ -5,12 +5,10 @@ import androidx.annotation.StringRes
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.IntrinsicSize
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.aspectRatio
-import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -23,8 +21,8 @@ import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.CurrencyExchange
-import androidx.compose.material.icons.filled.Restaurant
 import androidx.compose.material.icons.filled.SquareFoot
+import androidx.compose.material.icons.filled.WaterDrop
 import androidx.compose.material3.Button
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -52,12 +50,12 @@ private data class ButtonItem(
 fun HomeScreen(
     navigateToMeasurementCalculator: () -> Unit,
     navigateToCurrencyConverter: () -> Unit,
-    navigateToCookingConverter: () -> Unit
+    navigateToVolumeConverter: () -> Unit
 ) {
     val buttons = listOf(
         ButtonItem(Icons.Filled.SquareFoot, R.string.cd_measurement, navigateToMeasurementCalculator),
         ButtonItem(Icons.Filled.CurrencyExchange, R.string.cd_currency, navigateToCurrencyConverter),
-        ButtonItem(Icons.Filled.Restaurant, R.string.cd_cooking, navigateToCookingConverter)
+        ButtonItem(Icons.Filled.WaterDrop, R.string.cd_volume, navigateToVolumeConverter)
     )
 
     val isLandscape = LocalConfiguration.current.orientation == Configuration.ORIENTATION_LANDSCAPE

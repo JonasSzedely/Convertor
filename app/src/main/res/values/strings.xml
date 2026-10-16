@@ -1,20 +1,85 @@
 <resources>
     <string name="app_name">SpaceConvert</string>
 
-    <!-- Home -->
-    <string name="home_greeting">Hello Traveler!</string>
-    <string name="home_intro">I am Convertron,\nhow may I help you?</string>
-
     <!-- Title -->
     <string name="title_home">Home</string>
     <string name="title_measurement">Measurements</string>
     <string name="title_currency">Currencies</string>
-    <string name="title_cooking">Cooking</string>
+    <string name="title_volume">Volume</string>
 
     <!-- Content Descriptions (Accessibility) -->
     <string name="cd_home">open home screen</string>
     <string name="cd_measurement">Open measurement converter</string>
     <string name="cd_currency">Open currency converter</string>
-    <string name="cd_cooking">Open cooking converter</string>
+    <string name="cd_volume">Open volume converter</string>
     <string name="cd_dark_mode">Dark mode</string>
+
+    <!-- Home -->
+    <string name="home_greeting">Hello Traveler!</string>
+    <string name="home_intro">I am Convertron,\nhow may I help you?</string>
+
+    <!-- Converter -->
+    <string name="converter_input_label">Value</string>
+    <string name="cd_select_unit">Select unit</string>
+
+    <!-- Units: length -->
+    <string name="unit_nanometer">Nanometer</string>
+    <string name="unit_micrometer">Micrometer</string>
+    <string name="unit_millimeter">Millimeter</string>
+    <string name="unit_centimeter">Centimeter</string>
+    <string name="unit_decimeter">Decimeter</string>
+    <string name="unit_meter">Meter</string>
+    <string name="unit_kilometer">Kilometer</string>
+    <string name="unit_inch">Inch</string>
+    <string name="unit_hand">Hand</string>
+    <string name="unit_link">Link</string>
+    <string name="unit_foot">Foot</string>
+    <string name="unit_yard">Yard</string>
+    <string name="unit_mile">Mile</string>
+    <string name="unit_fathom">Fathom</string>
+    <string name="unit_cable">Cable</string>
+    <string name="unit_nautical_mile">Nautical mile</string>
+    <string name="unit_light_year">Light year</string>
+
+    <!-- Units: volume (metric) -->
+    <string name="unit_milliliter">Milliliter</string>
+    <string name="unit_centiliter">Centiliter</string>
+    <string name="unit_deciliter">Deciliter</string>
+    <string name="unit_liter">Liter</string>
+    <string name="unit_teaspoon_metric">Teaspoon</string>
+    <string name="unit_tablespoon_metric">Tablespoon</string>
+    <string name="unit_tablespoon_au">Tablespoon (AU)</string>
+    <string name="unit_cup_au_nz">Cup (AU)</string>
+    <string name="unit_cup_ca">Cup (CA)</string>
+    <string name="unit_cup_uk_metric">Cup (UK)</string>
+
+    <!-- Units: volume (Japan) -->
+    <string name="unit_kosaji_jp">Kosaji (JP)</string>
+    <string name="unit_osaji_jp">Ōsaji (JP)</string>
+    <string name="unit_go_jp">Gō (JP)</string>
+    <string name="unit_cup_jp">Cup (JP)</string>
+    <string name="unit_sho_jp">Shō (JP)</string>
+
+    <!-- Units: volume (UK imperial) -->
+    <string name="unit_teaspoon_uk">Teaspoon (UK)</string>
+    <string name="unit_tablespoon_uk">Tablespoon (UK)</string>
+    <string name="unit_fluid_ounce_uk">Fluid ounce (UK)</string>
+    <string name="unit_gill_uk">Gill (UK)</string>
+    <string name="unit_cup_uk_imperial">Cup (UK)</string>
+    <string name="unit_pint_uk">Pint (UK)</string>
+    <string name="unit_quart_uk">Quart (UK)</string>
+    <string name="unit_gallon_uk">Gallon (UK)</string>
+
+    <!-- Units: volume (US customary) -->
+    <string name="unit_fluid_dram_us">Fluid Dram (US)</string>
+    <string name="unit_teaspoon_us">Teaspoon (US)</string>
+    <string name="unit_tablespoon_us">Tablespoon (US)</string>
+    <string name="unit_fluid_ounce_us">Fluid Ounce (US)</string>
+    <string name="unit_jigger_us">Jigger (US)</string>
+    <string name="unit_gill_us">Gill (US)</string>
+    <string name="unit_cup_us">Cup (US)</string>
+    <string name="unit_pint_us">Pint (US)</string>
+    <string name="unit_quart_us">Quart (US)</string>
+    <string name="unit_gallon_us">Gallon (US)</string>
+
 </resources>

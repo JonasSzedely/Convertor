@@ -13,4 +13,4 @@ data object Measurement : NavKey
 data object Currency : NavKey
 
 @Serializable
-data object Cooking : NavKey
+data object Volume : NavKey

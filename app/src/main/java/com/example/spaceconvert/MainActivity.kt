@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.foundation.layout.consumeWindowInsets
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.getValue
@@ -16,14 +17,15 @@ import androidx.compose.ui.res.stringResource
 import androidx.navigation3.runtime.entryProvider
 import androidx.navigation3.runtime.rememberNavBackStack
 import androidx.navigation3.ui.NavDisplay
-import com.example.spaceconvert.navigation.Cooking
 import com.example.spaceconvert.navigation.Currency
 import com.example.spaceconvert.navigation.Home
 import com.example.spaceconvert.navigation.Measurement
+import com.example.spaceconvert.navigation.Volume
 import com.example.spaceconvert.ui.components.Header
-import com.example.spaceconvert.ui.screens.currency.CurrencyCalculatorScreen
+import com.example.spaceconvert.ui.screens.converter.CurrencyCalculatorScreen
 import com.example.spaceconvert.ui.screens.home.HomeScreen
-import com.example.spaceconvert.ui.screens.measurement.MeasurementCalculatorScreen
+import com.example.spaceconvert.ui.screens.converter.MeasurementCalculatorScreen
+import com.example.spaceconvert.ui.screens.converter.VolumeCalculatorScreen
 import com.example.spaceconvert.ui.theme.SpaceConvertTheme
 
 class MainActivity : ComponentActivity() {
@@ -39,7 +41,7 @@ class MainActivity : ComponentActivity() {
                 when (backStack.lastOrNull()) {
                     Measurement -> R.string.title_measurement
                     Currency -> R.string.title_currency
-                    Cooking -> R.string.title_cooking
+                    Volume -> R.string.title_volume
                     else -> R.string.title_home
                 }
             )
@@ -61,17 +63,20 @@ class MainActivity : ComponentActivity() {
                     NavDisplay(
                         backStack = backStack,
                         onBack = { backStack.removeLastOrNull() },
-                        modifier = Modifier.padding(innerPadding),
+                        modifier = Modifier
+                            .padding(innerPadding)
+                            .consumeWindowInsets(innerPadding), //consumes padding when the keyboard is active
                         entryProvider = entryProvider {
                             entry<Home> {
                                 HomeScreen(
                                     navigateToMeasurementCalculator = { backStack.add(Measurement) },
                                     navigateToCurrencyConverter = { backStack.add(Currency) },
-                                    navigateToCookingConverter = {backStack.add(Cooking)}
+                                    navigateToVolumeConverter = {backStack.add(Volume)}
                                 )
                             }
                             entry<Measurement> { MeasurementCalculatorScreen() }
                             entry<Currency> { CurrencyCalculatorScreen() }
+                            entry<Volume> { VolumeCalculatorScreen() }
                         }
                     )
                 }
