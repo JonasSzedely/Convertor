@@ -11,9 +11,9 @@ I build this app for my own daily use and keep extending it whenever I need a ne
 |:---:|:---:|:---:|
 | <img src="docs/home_dark.png" width="220"> | <img src="docs/length_dark.png" width="220"> | <img src="docs/volume_dark.png" width="220"> |
 
-| Home (light) | Volume (light) |
+| Home (light) | Length (light) |
 |:---:|:---:|
-| <img src="docs/home_light.png" width="220"> | <img src="docs/volume_light.png" width="220"> |
+| <img src="docs/home_light.png" width="220"> | <img src="docs/length_light.png" width="220"> |
 
 ## Features
 
